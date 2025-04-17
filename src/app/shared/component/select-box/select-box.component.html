@@ -1,0 +1,32 @@
+<div class="select-box">
+  <div class="select-container">
+    <!-- Single Select -->
+    <p-dropdown 
+      *ngIf="mode === 'single'" 
+      [options]="data" 
+      [(ngModel)]="selectedValue" 
+      [placeholder]="placeholder"
+    
+      (onChange)="selectionChange.emit(selectedValue)">
+    </p-dropdown>
+
+    <!-- Multi Select -->
+    <p-multiSelect 
+      *ngIf="mode === 'multi'" 
+      [options]="data" 
+      [(ngModel)]="selectedValues" 
+      [placeholder]="placeholder"
+      [maxSelectedLabels]="maxSelectedLabels"
+      (onChange)="checkMultiSelectLimit($event)">
+    </p-multiSelect>
+
+    <!-- Tree Select -->
+    <p-treeSelect 
+      *ngIf="mode === 'tree'" 
+      [options]="data" 
+      [(ngModel)]="selectedTreeValue" 
+      [placeholder]="placeholder"
+      (onChange)="selectionChange.emit(selectedTreeValue)">
+    </p-treeSelect>
+  </div>
+</div>

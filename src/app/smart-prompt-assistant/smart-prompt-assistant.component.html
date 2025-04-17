@@ -1,0 +1,74 @@
+
+<div class="chat-input-container">
+  <div class="input-wrapper">
+    <input type="file" accept="image/*" (change)="onFileSelected($event)" style="display: none;" #fileInput>
+   
+  
+ 
+      <input type="text" class="chat-input" 
+      [formControl]="promptControl" 
+      placeholder="Ask me anything..."
+      [disabled]="isSpeaking">
+      
+     
+    
+  </div>
+  <button class="microphone-button">
+    <i 
+    type="button" 
+    class="pi pi-microphone" 
+    *ngIf="!isSpeaking" 
+    (click)="startListening()" 
+   
+    title="Enable Speaking">
+  </i>
+  </button>
+  <button class="microphone-button">
+   
+    <i 
+      type="button" 
+      class="pi pi-check" 
+    
+      (click)="confirmSpeaking()" 
+     
+      title="Confirm and Fetch Suggestions">
+    </i>
+  </button>
+  <button class="microphone-button">
+   
+    <i 
+      type="button" 
+      class="pi pi-trash" 
+     
+      (click)="cancelSpeaking()" 
+     
+      title="Clear Input and Stop Speaking">
+    </i>
+  </button>
+  <button class="microphone-button">
+   
+    <i class="pi pi-paperclip" (click)="fileInput.click()"></i>
+  </button>
+ 
+</div>
+<div class="suggestion-container" *ngIf="suggestions.length > 0 || loading">
+  <div class="suggestion-screen">
+    <ul class="suggestion-list" *ngIf="!loading">
+      <li
+        *ngFor="let suggestion of suggestions"
+        (click)="selectSuggestion(suggestion)"
+        class="suggestion-item"
+      >
+        {{ suggestion }}
+      </li>
+    </ul>
+    <div class="loading-indicator" *ngIf="loading">
+      <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
+      just a moment...<br />
+
+     
+    </div>
+  </div>
+</div>
+
+

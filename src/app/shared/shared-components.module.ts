@@ -4,19 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
-
 @NgModule({
-  declarations: [
-   
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     FormsModule,
     TableModule,
     MatPaginatorModule,
   ],
-  exports: [
-   
-  ],
+  exports: [],
 })
 export class SharedComponentsModule {}

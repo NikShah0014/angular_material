@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { IconField, IconFieldModule } from 'primeng/iconfield';
 import { MatIconButton } from '@angular/material/button';
 import { CardModule } from 'primeng/card';
 import { TextareaModule } from 'primeng/textarea';
+import { UserListComponent } from "./pages/user-management/pages/user-list/user-list.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,11 +40,11 @@ import { TextareaModule } from 'primeng/textarea';
     IconFieldModule,
     MatIconButton,
     CardModule,
-    TextareaModule
-    
+    TextareaModule,
+    UserListComponent
 ],
   providers: [
-    provideClientHydration(withEventReplay())
+    provideClientHydration() // Removed withEventReplay()
   ],
   bootstrap: [AppComponent]
 })

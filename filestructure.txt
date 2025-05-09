@@ -1,0 +1,88 @@
+|-- .editorconfig
+|-- .gitignore
+|-- .qodo
+|-- angular.json
+|-- package-lock.json
+|-- package.json
+|-- public
+    |-- favicon.ico
+|-- README.md
+|-- src
+    |-- app
+        |-- app-routing.module.ts
+        |-- app.component.html
+        |-- app.component.scss
+        |-- app.component.spec.ts
+        |-- app.component.ts
+        |-- app.module.server.ts
+        |-- app.module.ts
+        |-- auth
+            |-- auth-routing.module.ts
+            |-- auth.module.ts
+        |-- layout
+            |-- authorized-layout
+                |-- authorized-layout.component.html
+                |-- authorized-layout.component.scss
+                |-- authorized-layout.component.spec.ts
+                |-- authorized-layout.component.ts
+            |-- layout.module.ts
+            |-- unauthorized-layout
+                |-- unauthorized-layout.component.html
+                |-- unauthorized-layout.component.scss
+                |-- unauthorized-layout.component.spec.ts
+                |-- unauthorized-layout.component.ts
+        |-- pages
+            |-- user-management
+                |-- pages
+                    |-- user-list
+                        |-- user-list.component.html
+                        |-- user-list.component.scss
+                        |-- user-list.component.spec.ts
+                        |-- user-list.component.ts
+                |-- user-management-routing.module.ts
+                |-- user-management.module.ts
+        |-- shared
+            |-- component
+                |-- basecomponent
+                    |-- base.component.ts
+                |-- controllers
+                    |-- controllers.module.ts
+                    |-- sf-input
+                        |-- sf-input.component.html
+                        |-- sf-input.component.scss
+                        |-- sf-input.component.spec.ts
+                        |-- sf-input.component.ts
+                |-- data-table
+                    |-- data-table.component.html
+                    |-- data-table.component.scss
+                    |-- data-table.component.spec.ts
+                    |-- data-table.component.ts
+                |-- select-box
+                    |-- select-box.component.html
+                    |-- select-box.component.scss
+                    |-- select-box.component.spec.ts
+                    |-- select-box.component.ts
+                |-- server-pagination.component
+                    |-- server-pagination.component.html
+                    |-- server-pagination.component.scss
+                    |-- server-pagination.component.spec.ts
+                    |-- server-pagination.component.ts
+            |-- constants
+                |-- api-url.constants.ts
+                |-- menu-config.constants.ts
+                |-- router.constants.ts
+            |-- models
+                |-- index.ts
+                |-- page.model.ts
+                |-- pagination-config.model.ts
+            |-- services
+                |-- base-crud-service.service.ts
+            |-- shared-components.module.ts
+    |-- index.html
+    |-- main.server.ts
+    |-- main.ts
+    |-- server.ts
+    |-- styles.scss
+|-- tsconfig.app.json
+|-- tsconfig.json
+|-- tsconfig.spec.json
